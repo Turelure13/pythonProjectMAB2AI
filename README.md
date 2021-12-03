@@ -2,8 +2,7 @@
 
 Plusieurs étapes sont à réaliser pour mener à bien le projet :
 
-	1. Comparer et classer des bases de données de RCF. Vous trouverez ci-dessous des bases de données trouvées via des plateformes telles que Kaggle et UCI. Cependant ces bases de données pourraient être complétées via d’autres plateformes ou via une collaboration avec un hôpital par exemple: (https://www.kaggle.com/rajanand/ahs-woman-1
-https://www.kaggle.com/akshat0007/fetalhr https://www.kaggle.com/andrewmvd/fetal-health-classification https://datasetsearch.research.google.com/search?query=Fetal%20cardiotocography%20data&doci d=L2cvMTFqOWJsNGYyNw%3D%3D https://www.kaggle.com/warkingleo2000/cardiotocogrpahy-dataset https://archive.ics.uci.edu/ml/datasets/Cardiotocography https://archive.ics.uci.edu/ml/datasets/Echocardiogram)
+	1. Comparer et classer des bases de données de RCF. Vous trouverez ci-dessous des bases de données trouvées via des plateformes telles que Kaggle et UCI. Cependant ces bases de données pourraient être complétées via d’autres plateformes ou via une collaboration avec un hôpital par exemple: (https://www.kaggle.com/rajanand/ahs-woman-1, https://www.kaggle.com/akshat0007/fetalhr, https://www.kaggle.com/andrewmvd/fetal-health-classification, https://datasetsearch.research.google.com/search?query=Fetal%20cardiotocography%20data&doci d=L2cvMTFqOWJsNGYyNw%3D%3D, https://www.kaggle.com/warkingleo2000/cardiotocogrpahy-dataset, https://archive.ics.uci.edu/ml/datasets/Cardiotocography, https://archive.ics.uci.edu/ml/datasets/Echocardiogram)
 
 	2. Data Exploration
 
