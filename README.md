@@ -7,6 +7,7 @@ Plusieurs étapes sont à réaliser pour mener à bien le projet :
 	2. Data Exploration
 
 	3. Data Cleaning, Pre processing et vérification de la fiabilité des données utilisées par un expert
+
 	4. Data Visualisation
 
 	5. Literature review : comparaison des méthodes d’intelligence artificielle appliquée à l’heure actuelle pour la détection de trace pathologique lors d’analyses de données RCF
