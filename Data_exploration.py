@@ -14,10 +14,14 @@ from tqdm import tqdm
 
 # In[2]:
 
+physionet_data_dir = "/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/physionet_data/"
+physionet_data_dir_s = "/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/physionet_data/%s"
+signals_csv_dir = '/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/%s.csv'
+ann_db_dir = '/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/ann_db.csv'
 
 def get_all_records():
     rec_list = []
-    for file in listdir("/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/physionet_data/"):
+    for file in listdir(physionet_data_dir):
         rec = file[:file.find('.')]
         try:
             rec = int(rec)
@@ -29,14 +33,14 @@ def get_all_records():
 
 
 def create_signals_database(rec):
-    sample = wfdb.rdsamp("/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/physionet_data/%s" % rec)
+    sample = wfdb.rdsamp(physionet_data_dir_s % rec)
     df = pd.DataFrame(sample[0], columns=['FHR', 'UC'])
     df.index.name = 'seconds'
-    df.to_csv('/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/%s.csv' % rec)
+    df.to_csv(signals_csv_dir % rec)
 
 
 def create_ann_dataframe(rec):
-    sample = wfdb.rdsamp("/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/physionet_data/%s" % rec)
+    sample = wfdb.rdsamp(physionet_data_dir_s % rec)
     ann = sample[1]['comments'][1:]
     ann_dic = {}
     for a in ann:
@@ -70,7 +74,7 @@ df = pd.DataFrame()
 for rec in tqdm(get_all_records()):
     create_signals_database(rec)
     df = append_ann_dataframes(df, create_ann_dataframe(rec))
-df.to_csv('/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/ann_db.csv')
+df.to_csv(ann_db_dir)
 
 print('DONE!')
 

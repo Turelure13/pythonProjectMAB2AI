@@ -37,7 +37,7 @@ def plot_TFBG(data):
     #             bbox_inches='tight')
 
 
-file_path = r"/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/1142.csv"
+file_path = r"/Users/arthurlefebvre/PycharmProjects/pythonProjectMAB2AIgit/database/signals/1001.csv"
 test = get_data_from_csv(file_path)
 
 plot_TFBG(test)
